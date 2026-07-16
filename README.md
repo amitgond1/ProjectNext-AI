@@ -184,16 +184,7 @@ Example request:
 
 For a new user, the system raises content weight to 60%, adds career impact and feasibility, and uses smoothed popularity only as a small tie-breaker. Required onboarding fields provide enough explicit preference data before clicks exist. Good next steps are a five-card preference quiz, diversity re-ranking by domain/stack, contextual bandits for exploration, and cohort priors (role, semester, skill level). For a new project, metadata embeddings make it immediately retrievable without interaction history.
 
-Measure cold start separately with `NDCG@10`, `Recall@10`, save/start conversion, completion rate, and post-completion rating. Avoid optimizing clicks alone; that tends to favor flashy but unfinished projects.
-
-## 7. Monetization
-
-- **Student freemium:** free recommendations; Pro includes weekly roadmaps, architecture reviews, GitHub progress evidence, resume bullets, and interview stories. A reasonable India-first experiment is ₹199–499/month, validated through willingness-to-pay tests.
-- **College SaaS:** cohort dashboard, skill-gap analytics, faculty review queues, project originality checks, placement-role alignment, SSO and exports. Charge per active student or annual campus license.
-- **Recruiter/partner marketplace:** verified project challenges sponsored by companies. Clearly label sponsored ranking and never mix payment into organic relevance.
-- **API/white label:** recommendations embedded in LMS, bootcamp, and placement platforms.
-
-North-star metric: percentage of recommended projects completed with verified evidence. Guardrails: recommendation diversity, completion time, rating, subgroup fairness, and sponsored-result transparency.
+Evaluate cold-start quality with `NDCG@10`, `Recall@10`, save/start conversion, completion rate, and post-completion ratings.
 
 ## Run locally
 
