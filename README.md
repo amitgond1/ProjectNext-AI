@@ -10,7 +10,33 @@
 
 ProjectNext AI ranks 233 project paths using Sentence-BERT semantic similarity, strict career-role retrieval, collaborative behavior, resume impact, and realistic time feasibility. Users can teach the recommender with **More like this** and **Not for me**, then turn any recommendation into a milestone-based execution plan.
 
-![ProjectNext AI onboarding](docs/screenshots/projectnext-home.png)
+![ProjectNext AI recommendation experience](docs/screenshots/05-project-matches.png)
+
+## Product tour
+
+### 1. Choose a career direction
+
+![Career goal onboarding](docs/screenshots/01-career-goal.png)
+
+### 2. Add skills and existing project experience
+
+![Skills and experience onboarding](docs/screenshots/02-experience.png)
+
+### 3. Define the ideal project and constraints
+
+![Project preference onboarding](docs/screenshots/03-project-preferences.png)
+
+### 4. Review the transparent AI recommendation dashboard
+
+![Recommendation dashboard](docs/screenshots/04-recommendation-dashboard.png)
+
+### 5. Compare explainable project matches
+
+![Explainable project recommendation cards](docs/screenshots/05-project-matches.png)
+
+### 6. Execute with milestones, architecture, and career evidence
+
+![Project execution workspace](docs/screenshots/06-execution-workspace.png)
 
 ## Why it is useful
 
@@ -205,6 +231,17 @@ SQLite is the zero-config backend default; set `DATABASE_URL` from `.env.example
 cd backend && pytest -q
 cd frontend && npm run build
 ```
+
+### Regenerate the screenshot gallery
+
+With the frontend and backend running:
+
+```bash
+pip install pyppeteer
+python scripts/capture_screenshots.py
+```
+
+The script opens local Chrome in headless mode, completes the demo onboarding flow, generates recommendations, opens a build blueprint, and refreshes all six images in `docs/screenshots/`.
 
 ## Render deployment
 
